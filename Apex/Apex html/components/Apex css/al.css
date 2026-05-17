@@ -1,0 +1,725 @@
+/* =========================================
+   ESTILOS BASE Y VARIABLES (MODERNO)
+   ========================================= */
+:root {
+  --apex-azul-marino: #0A1F44;
+  --apex-azul-electrico: #1A4DFF;
+  --apex-glow: rgba(26, 77, 255, 0.4);
+  --apex-plateado: #C7CCD4;
+  --apex-blanco: #FFFFFF;
+  --apex-negro-fondo: #050B18; /* Negro profundo para que el azul brille */
+  --apex-negro-card: #0D1526;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--apex-negro-fondo);
+  color: var(--apex-plateado);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER Y NAVEGACIÓN
+   ========================================= */
+.header {
+  background: rgba(10, 31, 68, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box img {
+  height: 50px; /* Tamaño optimizado */
+  width: auto;
+  filter: drop-shadow(0 0 8px var(--apex-glow));
+}
+
+nav a {
+  color: var(--apex-plateado);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: var(--transition);
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--apex-blanco);
+  text-shadow: 0 0 10px var(--apex-azul-electrico);
+}
+
+/* =========================================
+   HERO SECTION (IMPACTO VISUAL)
+   ========================================= */
+.hero {
+  padding: 100px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at 80% 20%, rgba(26, 77, 255, 0.1), transparent 40%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--apex-blanco);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 550px;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 400px;
+  filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-main {
+  background: var(--apex-azul-electrico);
+  color: var(--apex-blanco);
+  box-shadow: 0 4px 15px var(--apex-glow);
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+  background: #2b5cff;
+  box-shadow: 0 8px 25px var(--apex-glow);
+}
+
+/* =========================================
+   TARJETAS DE SERVICIOS
+   ========================================= */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--apex-blanco);
+  margin-bottom: 50px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.servicio-card {
+  background: var(--apex-negro-card);
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--apex-azul-electrico);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.servicio-card h3 {
+  color: var(--apex-blanco);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* =========================================
+   FORMULARIO DE CONTACTO
+   ========================================= */
+.contacto-container {
+  background: var(--apex-negro-card);
+  padding: 50px;
+  border-radius: 30px;
+  max-width: 900px;
+  margin: 50px auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--apex-azul-electrico);
+  background: rgba(26, 77, 255, 0.05);
+}
+
+/* =========================================
+   ANIMACIONES DE REVELADO (PARA JS)
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-img {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* =========================================
+   VARIABLES DE SISTEMA (NÚCLEO)
+   ========================================= */
+:root {
+  /* Paleta de Identidad */
+  --apex-azul-profundo: #050B18;
+  --apex-azul-medio: #0A1F44;
+  --apex-azul-electrico: #1A4DFF;
+  --apex-cian-brillante: #00D1FF;
+  
+  /* Estados y Tipografía */
+  --apex-blanco: #FFFFFF;
+  --apex-plateado: #C7CCD4;
+  --apex-gris-oscuro: #121A2D;
+  
+  /* Efectos */
+  --glow-electrico: 0 0 20px rgba(26, 77, 255, 0.4);
+  --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* =========================================
+   RESETEO Y CONFIGURACIÓN GLOBAL
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--apex-azul-profundo);
+  color: var(--apex-plateado);
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* =========================================
+   HEADER: EFECTO CRISTAL (FROSTED GLASS)
+   ========================================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(5, 11, 24, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-box img {
+  height: 45px;
+  filter: drop-shadow(var(--glow-electrico));
+  transition: var(--transition-smooth);
+}
+
+.logo-box:hover img {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+/* =========================================
+   HERO: IMPACTO DE MARCA
+   ========================================= */
+.hero {
+  padding-top: 160px;
+  padding-bottom: 100px;
+  background: radial-gradient(circle at 70% 30%, rgba(26, 77, 255, 0.08), transparent 50%);
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: var(--apex-blanco);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+/* Decoración de línea degradada */
+.hero-title span {
+  display: block;
+  width: 80px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--apex-azul-electrico), var(--apex-cian-brillante));
+  margin-top: 15px;
+  border-radius: 3px;
+}
+
+/* =========================================
+   CARDS: MICROELECTRÓNICA (DISEÑO TÉCNICO)
+   ========================================= */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.servicio-card {
+  background: var(--apex-gris-oscuro);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.servicio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 77, 255, 0.1), transparent);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--apex-azul-electrico);
+  box-shadow: var(--shadow-premium);
+}
+
+.servicio-card:hover::before {
+  opacity: 1;
+}
+
+.servicio-card h3 {
+  font-size: 1.6rem;
+  color: var(--apex-blanco);
+  margin-bottom: 15px;
+  z-index: 2;
+  position: relative;
+}
+
+/* =========================================
+   FORMULARIO: TICKET DE SOPORTE (UI LIMPIA)
+   ========================================= */
+.contacto-section {
+  padding: 100px 0;
+  background: #03070F;
+}
+
+.contacto-form {
+  max-width: 650px;
+  margin: 0 auto;
+  background: var(--apex-gris-oscuro);
+  padding: 50px;
+  border-radius: 32px;
+  box-shadow: var(--shadow-premium);
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: var(--apex-azul-electrico);
+  font-weight: 700;
+}
+
+input, textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  border-radius: 14px;
+  color: white;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  background: rgba(26, 77, 255, 0.03);
+  border-color: var(--apex-azul-electrico);
+  box-shadow: 0 0 20px rgba(26, 77, 255, 0.1);
+}
+
+/* =========================================
+   FOOTER (ESTILO CORPORATIVO)
+   ========================================= */
+.footer {
+  padding: 80px 0 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.footer-logo {
+  height: 40px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* =========================================
+   UTILIDADES DE ANIMACIÓN
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   1. RESET Y VARIABLES
+   ========================================= */
+:root {
+  --apex-azul-marino: #0A1F44;
+  --apex-azul-electrico: #1A4DFF;
+  --apex-plateado: #C7CCD4;
+  --apex-blanco: #FFFFFF;
+  --apex-negro-suave: #050B18; /* Negro más profundo para que el azul resalte */
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--apex-negro-suave);
+  color: var(--apex-plateado);
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   2. HEADER Y LOGO (CORREGIDO)
+   ========================================= */
+.header {
+  background: rgba(10, 31, 68, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-box img {
+  height: 45px; /* Altura fija para que no se pierda o sea gigante */
+  width: auto;
+  filter: drop-shadow(0 0 5px var(--apex-azul-electrico));
+}
+
+.logo-text {
+  font-size: 14px;
+  color: var(--apex-blanco);
+}
+
+nav a {
+  color: var(--apex-plateado);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--apex-azul-electrico);
+}
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+.hero {
+  padding: 100px 0;
+  background: radial-gradient(circle at 80% 20%, rgba(26, 77, 255, 0.1), transparent 50%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--apex-blanco);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+}
+
+/* =========================================
+   4. BOTONES
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-main {
+  background: var(--apex-azul-electrico);
+  color: var(--apex-blanco);
+}
+
+.btn-sec {
+  border: 2px solid var(--apex-azul-electrico);
+  color: var(--apex-azul-electrico);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 77, 255, 0.3);
+}
+
+/* =========================================
+   5. SERVICIOS (COINCIDE CON TU HTML)
+   ========================================= */
+.section { padding: 80px 0; }
+.bg-dark { background: #030812; }
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--apex-blanco);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.servicio-card {
+  background: #0D1526;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: var(--transition);
+}
+
+.servicio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Esto arregla que las fotos se vean estiradas */
+}
+
+.servicio-card-content { padding: 25px; }
+
+.servicio-card h3 {
+  color: var(--apex-blanco);
+  margin-bottom: 10px;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--apex-azul-electrico);
+}
+
+/* =========================================
+   6. CONTACTO Y FORMULARIO
+   ========================================= */
+.contacto-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  background: #0D1526;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--apex-azul-electrico);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: white;
+}
+
+/* =========================================
+   7. ANIMACIONES (COINCIDE CON TU JS)
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease-out;
+}
+
+.reveal.active { /* Cambié visible por active para que coincida con tu JS */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero-grid, .contacto-container { grid-template-columns: 1fr; }
+  .nav { flex-direction: column; gap: 15px; }
+}

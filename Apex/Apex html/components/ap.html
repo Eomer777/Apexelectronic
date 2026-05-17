@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>APEX — Reparación de Electrodomésticos</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="Apex css/ax.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo-box">
+      <img src="img de apex/logo con fondo.png" alt="APEX Logo">
+      <div class="logo-text">
+        <strong>APEX</strong><br>
+        Electrónica & Servicios
+      </div> 
+    </div>
+
+    <nav>
+      <a href="#hero">Inicio</a>
+      <a href="historia.html">Historia</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <h1 class="hero-title">Soluciones Técnicas para Electrodomésticos del Hogar</h1>
+      <p class="hero-sub">
+        Servicio confiable, procesos claros y atención profesional.  
+        APEX combina precisión técnica con un enfoque corporativo moderno.
+      </p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-main">Solicitar revisión</a>
+        <a href="servicios.html" class="btn btn-outline">Ver servicios</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-specialties">
+        
+        <a href="./servicios.html#licuadoras" class="specialty-card">
+          <div class="specialty-icon">⚙</div>
+          <h4>Licuadoras</h4>
+        </a>
+
+        <a href="./servicios.html#planchas" class="specialty-card">
+          <div class="specialty-icon">🔧</div>
+          <h4>Planchas</h4>
+        </a>
+
+        <a href="./servicios.html#abanico" class="specialty-card">
+          <div class="specialty-icon">🍃</div>
+          <h4>Abanico</h4>
+        </a>
+
+        <a href="./servicios.html#bocina" class="specialty-card">
+          <div class="specialty-icon">🔊</div>
+          <h4>Bocina</h4>
+        </a>
+
+        <a href="./servicios.html#bocinas" class="specialty-card">
+          <div class="specialty-icon">📺</div>
+          <h4>Televisores</h4>
+        </a>
+
+        <a href="./servicios.html#lavadora" class="specialty-card">
+          <div class="specialty-icon">👕</div>
+          <h4>Lavadora</h4>
+        </a>
+
+        <a href="./servicios.html#fuentes" class="specialty-card">
+          <div class="specialty-icon">🔌</div>
+          <h4>Fuentes conmutadas</h4>
+        </a>
+
+          <a href="./servicios.html#blower" class="specialty-card">
+          <div class="specialty-icon">🎐</div>
+          <h4>Blower</h4>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto-section reveal">
+  <div class="container contacto-grid">
+
+    <div class="contacto-info zoom">
+      <h2 class="contacto-title">Contáctanos</h2>
+      <p class="contacto-sub">
+        Estamos listos para ayudarte con cualquier reparación.  
+        Atención rápida, profesional y con procesos claros.
+      </p>
+
+      <div class="contacto-datos">
+        <p><strong>📋 Correo:</strong> <a href="mailto:apexelectronicayservicios22@gmail.com">apexelectronicayservicios22@gmail.com</a></p>
+        <p><strong>📤 Dirección:</strong> Prolongación 27 de Febrero, No. 796, en Las Caobas, Santo Domingo Oeste, República Dominicana</p>
+        <p><strong>📞 Teléfono:</strong> +1 829-876-6624</p>
+        <p><strong>🕒 Horario:</strong> 7:30 AM – 3:30 PM</p>
+      </div>
+
+      <div class="social-contact">
+        <a href="https://www.instagram.com/apex.es_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-btn ig">Instagram</a>
+        <a href="https://wa.me/18298766624" target="_blank" class="social-btn wa">WhatsApp</a>
+      </div>
+    </div>
+
+    <form action="https://formsubmit.co/apexelectronicayservicios22@gmail.com" method="POST" class="contacto-form reveal-right">
+      
+      <input type="hidden" name="_next" id="next-url">
+      
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nuevo Mensaje - APEX Electrónica">
+
+      <label>
+        Nombre
+        <input type="text" name="name" placeholder="Tu nombre" required>
+      </label>
+
+      <label>
+        Teléfono
+        <input type="tel" name="phone" placeholder="Tu número" required>
+      </label>
+
+      <label>
+        Correo
+        <input type="email" name="email" placeholder="Tu correo" required>
+      </label>
+
+      <label>
+        Mensaje
+        <textarea name="message" placeholder="Describe tu problema" required></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-main">Enviar mensaje</button>
+    </form>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>APEX — Electrónica & Servicios</p>
+    <p>Proyecto académico corporativo</p>
+  </div>
+</footer>
+
+<script>
+  // 1. Esto detecta tu página actual y le dice a FormSubmit dónde regresar
+  document.getElementById('next-url').value = window.location.href;
+
+  // 2. Animaciones de la página
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {threshold: 0.15});
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .fade, .zoom')
+    .forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
